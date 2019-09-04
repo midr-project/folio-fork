@@ -5,7 +5,7 @@
 .site-header {
 border-bottom: 1px solid $grey-color-light;
 background-color: #fff;
-opacity: 0.75;
+opacity: 1;
 position:fixed;
 left:0px;
 top:0px;
@@ -48,7 +48,30 @@ display: line;
         }
     }
 }
-
+.site-nav-left {
+    float: left;
+    line-height: $nav-height;
+    .page-link{
+    line-height: $base-line-height;
+            // Gaps between nav items, but not on the first one
+    &:not(:first-child) {
+    margin-left: 10px;
+            }
+        }
+    @include media-query($on-palm) {
+    position: fixed;
+    top: 0px;
+    left: 20px;
+    text-align: left;
+    &:hover .trigger {
+    display: block;
+    padding-bottom: 5px;
+            }
+    .page-link {
+    display: line;
+            }
+        }
+    }
 .header-bar{
     left: 0px;
     top: 0px;
@@ -74,19 +97,23 @@ display: line;
  * Site footer  **********************************************************
  */
 .site-footer {
-border-top: 1px solid $grey-color-dark;
-font-size: 10px;
+font-size: 20px;
 background-color: $grey-color-dark;
-padding: 2px;
 color: #aaa;
-position:fixed;
-left:0px;
-bottom:0px;
+position: relative;
 width:100%;
+height: $footer-height;
+clear:both;
+margin-top: -webkit-calc(-1 * (#{$footer-height}));
 }
 
 .site-footer p {
     margin-bottom: 0; // Remove margin set in _sass/_base.scss for vertical rythm
+}
+
+.site-footer > .wrapper {
+    padding-top: 15px;
+    text-align: center;
 }
 
 /**
@@ -109,12 +136,17 @@ color: $theme-color;
  * Page content   **********************************************************
  */
 .page-content {
-padding: 100px 0; /* VERTICAL PADDING FOR TITLE ON EVERY PAGE */
+min-height: 100%;
+}
+.page-content > .wrapper{
+padding-top: 100px; /* VERTICAL PADDING FOR TITLE ON EVERY PAGE */
+padding-bottom: -webkit-calc(100px + (#{$footer-height}));
 }
 .page-heading {
 font-size: 20px;
 }
 .post-list {
+padding-top: 50px;
 margin: 0px 0;
 list-style: none;
     > li {
@@ -166,7 +198,7 @@ font-size: 18px;
 .post-meta {
 font-size: $small-font-size;
 color: $grey-color;
-margin-bottom: 0px; 
+margin-bottom: 0px;
 }
 .post-link {
 display: block;
@@ -184,7 +216,7 @@ font-size: 16px;
 }
 
 
-/** 
+/**
  * Portfolio grid **********************************************************
 */
 // Nicolas Gallagher's micro clearfix hack

@@ -7,8 +7,9 @@ dl, dd, ol, ul, figure {
     margin: 0;
     padding: 0;
 }
-
-
+html{
+    height: 100%;
+}
 
 /** Variables **********************************************/
 $base-font-family:              Helvetica, sans-serif;
@@ -16,9 +17,10 @@ $base-line-height:              1.5em;
 $horizontal-spacing-unit:       50px;
 $vertical-spacing-unit:         40px;
 $nav-height:                    56px;
+$footer-height:                    56px;
 
 /* portfolio tinkering */
-$img_spacing: 5px; 
+$img_spacing: 5px;
 $img_height: 275px;
 $caption_font_size: 12px;
 $caption_color: #aaa;
@@ -37,7 +39,7 @@ $grey-color-light: #ddd;  /* navigation bar border */
 $text-color:     #666;
 
 /* Set theme color *************************/
-$theme-color:   $red;
+$theme-color:   $blue;
 
 
 /************************************************************/
@@ -45,6 +47,11 @@ $theme-color:   $red;
 /**
  * Basic styling
  */
+
+body{
+    height: -webkit-calc(100% - (#{$footer-height}));
+}
+
 body {
     font-family: $base-font-family;
     font-size: $base-font-size;
@@ -53,9 +60,8 @@ body {
     color: $text-color;
     background-color: $background-color;
     -webkit-text-size-adjust: 100%;
+    padding-top: $nav-height;
 }
-
-
 
 /**
  * Set `margin-bottom` to maintain vertical rhythm
@@ -195,8 +201,8 @@ pre {
  */ 
 
 .wrapper {
-    max-width: -webkit-calc(800px - (#{$horizontal-spacing-unit} * 2));
-    max-width:         calc(800px - (#{$horizontal-spacing-unit} * 2));
+    max-width: -webkit-calc(1000px - (#{$horizontal-spacing-unit} * 2));
+    max-width:         calc(1000px - (#{$horizontal-spacing-unit} * 2));
     margin-right: auto;
     margin-left: auto;
     padding-right: $horizontal-spacing-unit;
@@ -204,8 +210,8 @@ pre {
     @extend %clearfix;
 
     @include media-query($on-laptop) {
-        max-width: -webkit-calc(800px - (#{$horizontal-spacing-unit}));
-        max-width:         calc(800px - (#{$horizontal-spacing-unit}));
+        max-width: -webkit-calc(1000px - (#{$horizontal-spacing-unit}));
+        max-width:         calc(1000px - (#{$horizontal-spacing-unit}));
         padding-right: $spacing-unit / 2;
         padding-left: $spacing-unit / 2;
     }
