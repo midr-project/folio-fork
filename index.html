@@ -3,16 +3,16 @@ layout: default
 ---
 
 <div class="header-bar">
-  <h1>*folio</h1>
-  <h2>simple whitespace theme</h2>
+  <h1>mIDR</h1>
+  <h2>Usable Intrusion Detection & Response on Personal Mobile Devices</h2>
   <br/>
   <hr>
-  <br/>
 </div>
-
-
+<div class="header-bar">
+<h1>News</h1>
+</div>
 <ul class="post-list">
-    {% for post in paginator.posts %}
+    {% for post in site.news %}
       <li>
         <h2><a class="post-title" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
         <p class="post-meta">{{ post.date | date: '%B %-d, %Y — %H:%M' }}</p>
@@ -21,4 +21,39 @@ layout: default
         <hr/>
       </li>
     {% endfor %}
+</ul>
+<div class="header-bar">
+<h1>Selected publications</h1>
+</div>
+<ul class="post-list">
+    {% for pub in site.publications reversed %}
+        <li>
+            <h2><a class="poem-title" href="{{ pub.url | prepend: site.baseurl }}">{{ pub.title }}</a></h2>
+            <p class="post-meta" style="text-align: justify; padding: 10px;">{{ pub.description }}</p>
+            <p class="post-meta" style="text-align: left; padding-left: 10px;">{{ pub.authors }}</p>
+            <p class="post-meta" style="text-align: left; padding-left: 10px;">{{ pub.venue }}</p>
+        </li>
+    {% endfor %}
+</ul>
+<div class="header-bar">
+  <h1>Press</h1>
+  </div>
+  <ul class="post-list">
+      {% for poem in site.publications reversed %}
+          <li>
+              <h2><a class="poem-title" href="{{ poem.url | prepend: site.baseurl }}">{{ poem.title }}</a></h2>
+              <p class="post-meta">{{ poem.date | date: '%B %-d, %Y — %H:%M' }}</p>
+            </li>
+      {% endfor %}
+</ul>
+<div class="header-bar">
+  <h1>Funding</h1>
+  </div>
+  <ul class="post-list">
+      {% for poem in site.publications reversed %}
+          <li>
+              <h2><a class="poem-title" href="{{ poem.url | prepend: site.baseurl }}">{{ poem.title }}</a></h2>
+              <p class="post-meta">{{ poem.date | date: '%B %-d, %Y — %H:%M' }}</p>
+            </li>
+      {% endfor %}
 </ul>
