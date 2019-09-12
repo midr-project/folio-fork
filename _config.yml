@@ -21,7 +21,8 @@ plugins: [jekyll-paginate]
 collections:
   software:
     output: true
-    permalink: /software/:path/
+  team:
+    output: true
   news:
     output: true
   publications:
