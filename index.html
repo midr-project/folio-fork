@@ -28,10 +28,15 @@ layout: default
 <ul class="post-list">
     {% for pub in site.publications reversed %}
         <li>
-            <h2><a class="poem-title" href="{{ pub.url | prepend: site.baseurl }}">{{ pub.title }}</a></h2>
+            <h2><a class="poem-title"href="{{ pub.link }}" target="_blank">{{ pub.title }}</a></h2>
+            {% if pub.description %}
             <p class="post-meta" style="text-align: justify; padding: 10px;">{{ pub.description }}</p>
-            <p class="post-meta" style="text-align: left; padding-left: 10px;">{{ pub.authors }}</p>
-            <p class="post-meta" style="text-align: left; padding-left: 10px;">{{ pub.venue }}</p>
+            <p class="post-meta" style="text-align: left; padding-left: 5px;">{{ pub.authors }}</p>
+            <p class="post-meta" style="text-align: left; padding-left: 5px;">{{ pub.venue }}</p>
+            {% else %}
+            <p class="post-meta" style="text-align: left; padding-left: 5px; padding-top: 5px;">{{ pub.authors }}</p>
+            <p class="post-meta" style="text-align: left; padding-left: 5px;">{{ pub.venue }}</p>
+            {% endif %}
         </li>
     {% endfor %}
 </ul>
