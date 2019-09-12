@@ -139,7 +139,7 @@ color: $theme-color;
 min-height: 100%;
 }
 .page-content > .wrapper{
-padding-top: 100px; /* VERTICAL PADDING FOR TITLE ON EVERY PAGE */
+padding-top: 40px; /* VERTICAL PADDING FOR TITLE ON EVERY PAGE */
 padding-bottom: -webkit-calc(100px + (#{$footer-height}));
 }
 .page-heading {
@@ -230,8 +230,8 @@ display: table;
 clear: both;
 }
 .project {
-width: 33.33%;
-height: 250px;
+width: 225px;
+height: 225px;
 float: left;
 vertical-align: middle;
 box-sizing: border-box;
@@ -239,21 +239,18 @@ padding: 10px;
 }
 .thumbnail{
 width: 100%;
-height: 230px;
-overflow: hidden;
+height: 100%;
 }
 .thumbnail img{
-width: 500px;
-height: auto;
+width: 100%;
+height: 100%;
 position: relative;
-left: -25%;
-top: -5%;
 }
 .thumbnail a{
 float: left;
 position: relative;
 width: 100%;
-height: 230px;
+height: 100%;
 }
 .thumbnail a span {
 display: none;
