@@ -25,6 +25,8 @@ collections:
     output: true
   news:
     output: true
+  press:
+    output: true
   publications:
     output: true
 

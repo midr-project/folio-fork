@@ -5,4 +5,5 @@ authors: "Diogo Marques, Tiago Guerreiro, Luís Carriço, Ivan Beschastnikh, Kon
 venue: "WAY 2018 - Who are you? Adventures in Authentication Workshop at SOUPS, Baltimore, USA, August, 2018"
 date-str: "August 2018"
 link: "https://tjvguerreiro.github.io/pubs/way2018-non-stranger.pdf"
+img: /img/1.jpg
 ---

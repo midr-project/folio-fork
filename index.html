@@ -2,63 +2,78 @@
 layout: default
 ---
 
-<div class="header-bar">
+<div class="header-bar" style="padding-top: 0;">
   <h1>mIDR</h1>
-  <h2>Usable Intrusion Detection & Response on Personal Mobile Devices</h2>
-  <br/>
+  <h2 style="padding-bottom: 30px">Usable Intrusion Detection & Response on Personal Mobile Devices</h2>
   <hr>
 </div>
 <div class="header-bar">
 <h1>News</h1>
 </div>
 <ul class="post-list">
-    {% for post in site.news %}
+    {% for new in site.news reversed %}
       <li>
-        <h2><a class="post-title" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
-        <p class="post-meta">{{ post.date | date: '%B %-d, %Y — %H:%M' }}</p>
-        <p>{{ post.description }}</p>
-        <br/>
-        <hr/>
+        <h2><a class="post-title" href="{{ new.url | prepend: site.baseurl }}">{{ new.title }}</a></h2>
+        <p class="post-description">{{ new.description }}</p>
+        <p class="post-meta">{{ new.date | date: '%B %-d, %Y — %H:%M' }}</p>
+        <br>
       </li>
     {% endfor %}
 </ul>
+<hr>
 <div class="header-bar">
 <h1>Selected publications</h1>
 </div>
 <ul class="post-list">
     {% for pub in site.publications reversed %}
         <li>
-            <h2><a class="poem-title"href="{{ pub.link }}" target="_blank">{{ pub.title }}</a></h2>
-            {% if pub.description %}
-            <p class="post-meta" style="text-align: justify; padding: 10px;">{{ pub.description }}</p>
-            <p class="post-meta" style="text-align: left; padding-left: 5px;">{{ pub.authors }}</p>
-            <p class="post-meta" style="text-align: left; padding-left: 5px;">{{ pub.venue }}</p>
-            {% else %}
-            <p class="post-meta" style="text-align: left; padding-left: 5px; padding-top: 5px;">{{ pub.authors }}</p>
-            <p class="post-meta" style="text-align: left; padding-left: 5px;">{{ pub.venue }}</p>
+            <div class="publication-grid-container">
+              <div class="publication-grid-img">
+                <div class="publication-thumbnail">
+                  <img src="{{ pub.img }}"/>
+                </div>
+              </div>
+              <div class="publication-grid-body">
+                  <h2><a class="poem-title"href="{{ pub.link }}" target="_blank">{{ pub.title }}</a></h2>
+                  {% if pub.description %}
+                  <p class="post-description" style="text-align: justify; padding: 10px;">{{ pub.description }}</p>
+                  <p class="post-meta-important" style="text-align: left; padding-left: 5px;">{{ pub.authors }}</p>
+                  <p class="post-meta" style="text-align: left; padding-left: 5px;">{{ pub.venue }}</p>
+                  {% else %}
+                  <p class="post-meta-important" style="text-align: left; padding-left: 5px; padding-top: 5px;">{{ pub.authors }}</p>
+                  <p class="post-meta" style="text-align: left; padding-left: 5px;">{{ pub.venue }}</p>
+              </div>
+            </div>
             {% endif %}
         </li>
     {% endfor %}
 </ul>
+<hr style="margin-top: 25px;">
 <div class="header-bar">
   <h1>Press</h1>
-  </div>
+</div>
   <ul class="post-list">
-      {% for poem in site.publications reversed %}
-          <li>
-              <h2><a class="poem-title" href="{{ poem.url | prepend: site.baseurl }}">{{ poem.title }}</a></h2>
-              <p class="post-meta">{{ poem.date | date: '%B %-d, %Y — %H:%M' }}</p>
-            </li>
+      {% for post in site.press reversed %}
+      <li>
+          <h2><a class="post-title" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
+          <p class="post-description">{{ post.description }}</p>
+          <p class="post-meta">{{ post.date | date: '%B %-d, %Y — %H:%M' }}</p>
+          <br>
+      </li>
       {% endfor %}
-</ul>
+  </ul>
+  Others
+  <ul style="margin-left: 30px;">
+      {% for item in site.data.press %}
+        <li>
+          <p class="press-item"><a class="press-item" href="{{ item.original-url }}" target="_blank"></a><strong>{{ item.title }}</strong></a>, {{ item.where }}, {{ item.date | date: '%B %-d, %Y' }}</p>
+        </li>
+      {% endfor %}
+  </ul>
+
+<hr style="margin-top: 25px;">
 <div class="header-bar">
   <h1>Funding</h1>
   </div>
-  <ul class="post-list">
-      {% for poem in site.publications reversed %}
-          <li>
-              <h2><a class="poem-title" href="{{ poem.url | prepend: site.baseurl }}">{{ poem.title }}</a></h2>
-              <p class="post-meta">{{ poem.date | date: '%B %-d, %Y — %H:%M' }}</p>
-            </li>
-      {% endfor %}
+  <h2>This project was funded by...</h2>
 </ul>

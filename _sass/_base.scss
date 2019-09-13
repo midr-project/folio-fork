@@ -36,7 +36,7 @@ $purple: #B509AC;
 
 $grey-color-dark: #333;   /* footer */
 $grey-color-light: #ddd;  /* navigation bar border */
-$text-color:     #666;
+$text-color:     rgb(40, 40, 40);
 
 /* Set theme color *************************/
 $theme-color:   $blue;
@@ -159,7 +159,7 @@ blockquote {
     color: $text-color;
     border-left: 10px solid $grey-color-light;
     padding-left: $horizontal-spacing-unit / 2;
-    font-size: 18px;
+    font-size: 1.1em;
     font-style: italic;
 
     > :last-child {
@@ -174,7 +174,7 @@ blockquote {
  */
 pre,
 code {
-    font-size: 15px;
+    font-size: 1em;
     border-radius: 3px;
     background-color: $grey-color-light;
 }
