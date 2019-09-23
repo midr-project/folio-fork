@@ -144,7 +144,7 @@
   width:100%;
   height: $footer-height;
   clear:both;
-  margin-top: -webkit-calc(-1 * (#{$footer-height}));
+  margin-top: calc(-1 * (#{$footer-height}));
 }
 
 .site-footer p {
@@ -160,7 +160,7 @@
 * Pagination   **********************************************************
 */
 .pagination{
-  max-width: -webkit-calc(800px - (#{$horizontal-spacing-unit} * 2));
+  max-width: calc(800px - (#{$horizontal-spacing-unit} * 2));
   text-align: center;
   width: 100%;
   position: fixed;
@@ -180,7 +180,7 @@ min-height: 100%;
 }
 .page-content > .wrapper{
 padding-top: 40px; /* VERTICAL PADDING FOR TITLE ON EVERY PAGE */
-padding-bottom: -webkit-calc(0px + (#{$footer-height}));
+padding-bottom: calc(0px + (#{$footer-height}));
 }
 .page-heading {
 font-size: 20px;
@@ -449,7 +449,7 @@ height: auto;
 
 iframe{
 width: 90vw;
-max-width: -webkit-calc(1000px - (50px * 2));;
+max-width: calc(1000px - (50px * 2));;
 height: 506px;
 position: relative;
 display: block;
