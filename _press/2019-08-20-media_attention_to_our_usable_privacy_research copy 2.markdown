@@ -3,7 +3,7 @@ layout: post
 title:  Media attention to our Usable Privacy research
 date:   2019-08-20 16:40:16
 description: "Our research was featured on “The Daily Show” by Trevor Noah on July 29th. The research led by Diogo Marques, advised by me and Luis Carriço, with the collaboration of UBC researchers (Ivan Beschastnikh and Kosta Beznosov), had media attention in the last three years (since our SOUPS’16 paper), but I guess this is the highlight. Obviously, the research findings have been used with liberty but nonetheless."
-where: tv
+where: paper
 ---
 
 Check it out, starting on 03:05:

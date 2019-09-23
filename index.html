@@ -7,10 +7,10 @@ layout: default
   <h2 style="padding-bottom: 30px">Usable Intrusion Detection & Response on Personal Mobile Devices</h2>
   <hr>
 </div>
-<div class="header-bar">
+<div class="header-bar-small">
 <h1>News</h1>
 </div>
-<ul class="post-list">
+<!-- <ul class="post-list">
     {% for new in site.news reversed %}
       <li>
         <h2><a class="post-title" href="{{ new.url | prepend: site.baseurl }}">{{ new.title }}</a></h2>
@@ -19,9 +19,19 @@ layout: default
         <br>
       </li>
     {% endfor %}
-</ul>
-<hr>
-<div class="header-bar">
+</ul> -->
+<div class="news-grid" style="padding-top: 25px; display: grid; column-gap: 16px; grid-template-columns: fit-content(250px) auto;">
+  {% for new in site.news reversed %}
+    <div style="grid-column-start: 1;grid-column-end: 2;">
+        <strong>{{ new.date | date: '%B %-d, %Y' }}</strong>
+    </div>
+    <div style="grid-column-start: 2;grid-column-end: 3; ">
+        {{ new.description }}
+    </div>
+  {% endfor %}
+</div>
+<hr style="margin-top: 25px;">
+<div class="header-bar-small">
 <h1>Selected publications</h1>
 </div>
 <ul class="post-list">
@@ -37,11 +47,11 @@ layout: default
                   <h2><a class="poem-title"href="{{ pub.link }}" target="_blank">{{ pub.title }}</a></h2>
                   {% if pub.description %}
                   <p class="post-description" style="text-align: justify; padding: 10px;">{{ pub.description }}</p>
-                  <p class="post-meta-important" style="text-align: left; padding-left: 5px;">{{ pub.authors }}</p>
-                  <p class="post-meta" style="text-align: left; padding-left: 5px;">{{ pub.venue }}</p>
+                  <p class="post-meta-important" style="text-align: left; ">{{ pub.authors }}</p>
+                  <p class="post-meta" style="text-align: left; ">{{ pub.venue }}</p>
                   {% else %}
-                  <p class="post-meta-important" style="text-align: left; padding-left: 5px; padding-top: 5px;">{{ pub.authors }}</p>
-                  <p class="post-meta" style="text-align: left; padding-left: 5px;">{{ pub.venue }}</p>
+                  <p class="post-meta-important" style="text-align: left; padding-top: 5px;">{{ pub.authors }}</p>
+                  <p class="post-meta" style="text-align: left; ">{{ pub.venue }}</p>
               </div>
             </div>
             {% endif %}
@@ -49,17 +59,33 @@ layout: default
     {% endfor %}
 </ul>
 <hr style="margin-top: 25px;">
-<div class="header-bar">
+<div class="header-bar-small">
   <h1>Press</h1>
 </div>
   <ul class="post-list">
       {% for post in site.press reversed %}
-      <li>
+      <div class="press-grid-container">
+          <div class="press-grid-img">
+            <div class="press-thumbnail">
+              {% if post.img %}
+              <img src="{{ post.img }}"/>
+              {% else %}
+              <img src="{{ site.url }}{{ site.baseurl }}/img/icons/{{post.where}}_icon.png""/>
+              {% endif %}
+            </div>
+          </div>
+          <div class="press-grid-body">
+              <h2><a class="post-title" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
+              <p class="post-description">{{ post.description }}</p>
+              <p class="post-meta">{{ post.date | date: '%B %-d, %Y — %H:%M' }}</p>
+          </div>
+        </div>
+      <!-- <li>
           <h2><a class="post-title" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
           <p class="post-description">{{ post.description }}</p>
           <p class="post-meta">{{ post.date | date: '%B %-d, %Y — %H:%M' }}</p>
           <br>
-      </li>
+      </li> -->
       {% endfor %}
   </ul>
   Others
@@ -70,10 +96,3 @@ layout: default
         </li>
       {% endfor %}
   </ul>
-
-<hr style="margin-top: 25px;">
-<div class="header-bar">
-  <h1>Funding</h1>
-  </div>
-  <h2>This project was funded by...</h2>
-</ul>
