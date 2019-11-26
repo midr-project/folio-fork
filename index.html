@@ -3,34 +3,34 @@ layout: default
 ---
 
 <div class="header-bar" style="padding-top: 0;">
-  <h1>mIDR</h1>
-  <h2 style="padding-bottom: 30px">Usable Intrusion Detection & Response on Personal Mobile Devices</h2>
+  <!-- <h2>Usable Intrusion Detection & Response on Personal Mobile Devices</!-->
+  <p class="project-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
   <hr>
 </div>
-<div class="header-bar-small">
+<div class="header-bar-small" style="margin-bottom: 25px">
 <h1>News</h1>
 </div>
-<!-- <ul class="post-list">
-    {% for new in site.news reversed %}
-      <li>
-        <h2><a class="post-title" href="{{ new.url | prepend: site.baseurl }}">{{ new.title }}</a></h2>
-        <p class="post-description">{{ new.description }}</p>
-        <p class="post-meta">{{ new.date | date: '%B %-d, %Y — %H:%M' }}</p>
-        <br>
-      </li>
-    {% endfor %}
-</ul> -->
-<div class="news-grid" style="padding-top: 25px; display: grid; column-gap: 16px; grid-template-columns: fit-content(250px) auto;">
-  {% for new in site.news reversed %}
-    <div style="grid-column-start: 1;grid-column-end: 2;">
-        <strong>{{ new.date | date: '%B %-d, %Y' }}</strong>
+{% for new in site.news reversed limit:5 %}
+<div class="news-flex-container">
+    <div class="news-flex-img">
+      <div class="news-flex-thumbnail">
+        <img src="{{ site.url }}{{ site.baseurl }}/img/icons/paper_icon_small.png""/>
+      </div>
     </div>
-    <div style="grid-column-start: 2;grid-column-end: 3; ">
-        {{ new.description }}
-    </div>
-  {% endfor %}
+    <div class="news-flex-body">
+      <div>
+          <strong>{{ new.date | date: '%B %-d, %Y' }}</strong>
+      </div>
+      <div >
+          {{ new.description }}
+      </div>
+  </div>
 </div>
-<hr style="margin-top: 25px;">
+{% endfor %}
+<div style="padding-top: 20px">
+  <a href="{{ site.url }}{{ site.baseurl }}/news/"><h3 style="text-align: end;">All news...</h3></a>
+</div>
+<hr>
 <div class="header-bar-small">
 <h1>Selected publications</h1>
 </div>
@@ -44,7 +44,7 @@ layout: default
                 </div>
               </div>
               <div class="publication-grid-body">
-                  <h2><a class="poem-title"href="{{ pub.link }}" target="_blank">{{ pub.title }}</a></h2>
+                  <h2><a class="poem-title" href="{{ pub.link }}" target="_blank">{{ pub.title }}</a></h2>
                   {% if pub.description %}
                   <p class="post-description" style="text-align: justify; padding: 10px;">{{ pub.description }}</p>
                   <p class="post-meta-important" style="text-align: left; ">{{ pub.authors }}</p>
@@ -52,13 +52,17 @@ layout: default
                   {% else %}
                   <p class="post-meta-important" style="text-align: left; padding-top: 5px;">{{ pub.authors }}</p>
                   <p class="post-meta" style="text-align: left; ">{{ pub.venue }}</p>
+                  <p class="post-meta" style="text-align: left; ">[ <a class="poem-title" href="{{ pub.link }}" target="_blank"><i class="fa fa-file-pdf-o" aria-hidden="true"></i> pdf </a> ] </p>
               </div>
             </div>
             {% endif %}
         </li>
     {% endfor %}
 </ul>
-<hr style="margin-top: 25px;">
+<div style="padding-top: 20px">
+  <a href="{{ site.url }}{{ site.baseurl }}/press/"><h3 style="text-align: end;">All publications...</h3></a>
+</div>
+<hr>
 <div class="header-bar-small">
   <h1>Press</h1>
 </div>
@@ -88,11 +92,6 @@ layout: default
       </li> -->
       {% endfor %}
   </ul>
-  Others
-  <ul style="margin-left: 30px;">
-      {% for item in site.data.press %}
-        <li>
-          <p class="press-item"><a class="press-item" href="{{ item.original-url }}" target="_blank"></a><strong>{{ item.title }}</strong></a>, {{ item.where }}, {{ item.date | date: '%B %-d, %Y' }}</p>
-        </li>
-      {% endfor %}
-  </ul>
+  <div style="padding-top: 20px">
+    <a href="{{ site.url }}{{ site.baseurl }}/press/"><h3 style="text-align: end; padding-bottom: 25px">All press...</h3></a>
+  </div>

@@ -1,15 +1,13 @@
 ---
 layout: post
-title:  Media attention to our Usable Privacy research
-date:   2019-08-20 16:40:16
-description: "Our research was featured on “The Daily Show” by Trevor Noah on July 29th. The research led by Diogo Marques, advised by me and Luis Carriço, with the collaboration of UBC researchers (Ivan Beschastnikh and Kosta Beznosov), had media attention in the last three years (since our SOUPS’16 paper), but I guess this is the highlight. Obviously, the research findings have been used with liberty but nonetheless."
-where: radio
+title:  "Snooping through your partner’s phone? It might not end as badly as you think: study"
+date:   2019-06-02
+description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Proin sed libero enim sed faucibus turpis in eu mi. Velit egestas dui id ornare arcu. Nec ullamcorper sit amet risus nullam eget felis eget nunc. Lobortis mattis aliquam faucibus purus in massa tempor nec feugiat. Orci nulla pellentesque dignissim enim sit amet venenatis urna cursus."
+where: tv
 ---
 
-Check it out, starting on 03:05:
-<br>
 <div>
-<iframe src="//media.mtvnservices.com/embed/mgid:arc:video:comedycentral.com:a8e1f53b-821a-4ec0-bae7-527572d1c998"  frameborder="0" allowfullscreen="true"></iframe>
+<iframe scrolling="no" frameborder="0" allowfullscreen webkitallowfullscreen mozallowfullscreen allow="autoplay; fullscreen" src="https://w3.cdn.anvato.net/player/prod/v3/anvload.html?key=eyJtIjoiY2JzIiwidiI6IjQwOTY4OTEiLCJhbnZhY2siOiJEVnpsOVFSem94M1pac1A5Yk51NUxpM1g3b2JRT25xUCIsInNoYXJlTGluayI6Imh0dHBzOi8vY2JzbG9jLmFsLzJ3eFpSZE4iLCJwbHVnaW5zIjp7ImNvbXNjb3JlIjp7ImNsaWVudElkIjoiMzAwMDAyMyIsImMzIjoiTWlubmVzb3RhLmNic2xvY2FsLmNvbSJ9LCJkZnAiOnsiY2xpZW50U2lkZSI6eyJhZFRhZ1VybCI6Imh0dHA6Ly9wdWJhZHMuZy5kb3VibGVjbGljay5uZXQvZ2FtcGFkL2Fkcz9zej0yeDImaXU9LzQxMjgvY2JzLm1pbm4mY2l1X3N6cyZpbXBsPXMmZ2RmcF9yZXE9MSZlbnY9dnAmb3V0cHV0PXhtbF92YXN0MiZ1bnZpZXdlZF9wb3NpdGlvbl9zdGFydD0xJnVybD1bcmVmZXJyZXJfdXJsXSZkZXNjcmlwdGlvbl91cmw9W2Rlc2NyaXB0aW9uX3VybF0mY29ycmVsYXRvcj1bdGltZXN0YW1wXSIsImtleVZhbHVlcyI6eyJjYXRlZ29yaWVzIjoiW1tDQVRFR09SSUVTXV0iLCJwcm9ncmFtIjoiW1tQUk9HUkFNX05BTUVdXSIsInNpdGVTZWN0aW9uIjoiZmVhdHVyZWQifX0sImxpYnJhcnlSZXF1ZXN0ZWQiOnRydWV9LCJoZWFydGJlYXRCZXRhIjp7ImFjY291bnQiOiJjYnNsb2NhbC1nbG9iYWwtdW5pZmllZCIsInB1Ymxpc2hlcklkIjoiY2JzbG9jYWwiLCJqb2JJZCI6InNjX3ZhIiwibWFya2V0aW5nQ2xvdWRJZCI6IjgyM0JBMDMzNTU2NzQ5N0Y3RjAwMDEwMUBBZG9iZU9yZyIsInRyYWNraW5nU2VydmVyIjoiY2JzZGlnaXRhbG1lZGlhLmhiLm9tdHJkYy5uZXQiLCJjdXN0b21UcmFja2luZ1NlcnZlciI6ImNic2RpZ2l0YWxtZWRpYS5kMS5zYy5vbXRyZGMubmV0IiwiY2hhcHRlclRyYWNraW5nIjpmYWxzZSwidmVyc2lvbiI6IjEuNSIsInBhcmVudFBhZ2VVUkwiOiJodHRwczovL21pbm5lc290YS5jYnNsb2NhbC5jb20vMjAxOS8wNi8wMy95ZXMtc25vb3Bpbmctb24teW91ci1wYXJ0bmVycy1waG9uZS1jb3VsZC1lbmQtdGhlLXJlbGF0aW9uc2hpcC1zdHVkeS1maW5kcy8iLCJwYXJlbnRUaXRsZSI6IlllcywgU25vb3BpbmcgT24gWW91ciBQYXJ0bmVy4oCZcyBQaG9uZSBDb3VsZCBFbmQgVGhlIFJlbGF0aW9uc2hpcCwgU3R1ZHkgRmluZHMg4oCTIFdDQ08gfCBDQlMgTWlubmVzb3RhIiwicEluc3RhbmNlIjoicDAiLCJwcm9maWxlIjoiY2JzIiwiY3VzdG9tVHJhY2tpbmdTZXJ2ZXJTZWN1cmUiOiJjYnNkaWdpdGFsbWVkaWEuZDEuc2Mub210cmRjLm5ldCJ9fSwiaHRtbDUiOnRydWUsInRva2VuIjoiZGVmYXVsdCJ9"></iframe>
 </div>
 <br>
 #### Read the paper here: [Vulnerability & Blame: Making Sense of Unauthorized Access to Smartphones](https://tjvguerreiro.github.io/pubs/vulnerability_chi19.pdf)

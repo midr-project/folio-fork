@@ -3,9 +3,10 @@ layout: page
 title: team
 permalink: /team/
 ---
-
+<div class="team-container-outer">
+<div class="team-container">
 {% for person in site.team %}
-<div class="team">
+<div class="team-photos">
     <div class="thumbnail">
         <a href="{{ person.link }}" target="_blank">
         {% if person.img %}
@@ -23,3 +24,5 @@ permalink: /team/
     <p style="margin-top: 5px;">{{ person.role }}</p>
 </div>
 {% endfor %}
+</div>
+</div>

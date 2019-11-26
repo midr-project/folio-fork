@@ -17,7 +17,7 @@ $base-line-height:              1.5em;
 $horizontal-spacing-unit:       50px;
 $vertical-spacing-unit:         40px;
 $nav-height:                    56px;
-$footer-height:                 150px;
+$footer-height:                 200px;
 
 /* portfolio tinkering */
 $img_spacing: 5px;
@@ -142,7 +142,7 @@ a {
 }
 
 article a {
-    color: $theme-color;
+    color: #282828;
     font-weight: 100;
 
     &:hover {
