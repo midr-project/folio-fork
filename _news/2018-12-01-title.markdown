@@ -1,0 +1,7 @@
+---
+layout: post
+title:  Ana Pires joined the project as a PostDoc Researcher.
+date:   2018-12-01 00:00:00
+description: Ana Pires joined the project as a PostDoc Researcher.
+---
+Ana Pires joined the project as a PostDoc Researcher.

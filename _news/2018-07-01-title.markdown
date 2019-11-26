@@ -1,0 +1,7 @@
+---
+layout: post
+title:  We were visited by Ivan Beschastnikh for a week. He offered a seminar and we collaborated on our unauthorized access research.
+date:   2018-07-01 00:00:00
+description: We were visited by Ivan Beschastnikh for a week. He offered a seminar and we collaborated on our unauthorized access research.
+---
+We were visited by Ivan Beschastnikh for a week. He offered a seminar and we collaborated on our unauthorized access research.

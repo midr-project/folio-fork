@@ -1,0 +1,7 @@
+---
+layout: post
+title:  "Our paper \"Vulnerability & Blame: Making Sense of Unauthorized Access to Smartphones\" was presented at CHI 2019, the topmost conference in HCI."
+date:   2019-05-01 00:00:00
+description: "Our paper \"Vulnerability & Blame: Making Sense of Unauthorized Access to Smartphones\" was presented at CHI 2019, the topmost conference in HCI."
+---
+Our paper "Vulnerability & Blame: Making Sense of Unauthorized Access to Smartphones" was presented at CHI 2019, the topmost conference in HCI.

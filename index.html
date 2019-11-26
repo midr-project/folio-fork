@@ -4,7 +4,7 @@ layout: default
 
 <div class="header-bar" style="padding-top: 0;">
   <!-- <h2>Usable Intrusion Detection & Response on Personal Mobile Devices</!-->
-  <p class="project-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  <p class="project-description">The goal of this project is to develop and evaluate passive modes of security, that can accommodate the social relationships between owners and socially-close adversaries. Unlike unlock authentication, which is an active defense against physical access, passive defenses aim to primarily provide awareness, traceability, and recovery from intrusions; and to only secondarily engage counter-measures like blocking access.</p>
   <hr>
 </div>
 <div class="header-bar-small" style="margin-bottom: 25px">
@@ -19,7 +19,7 @@ layout: default
     </div>
     <div class="news-flex-body">
       <div>
-          <strong>{{ new.date | date: '%B %-d, %Y' }}</strong>
+          <strong>{{ new.date | date: '%B, %Y' }}</strong>
       </div>
       <div >
           {{ new.description }}
@@ -95,3 +95,27 @@ layout: default
   <div style="padding-top: 20px">
     <a href="{{ site.url }}{{ site.baseurl }}/press/"><h3 style="text-align: end; padding-bottom: 25px">All press...</h3></a>
   </div>
+  <hr>
+  <div class="header-bar-small" style="margin-bottom: 25px">
+    <h1>Software</h1>
+    </div>
+    {% for new in site.software reversed limit:5 %}
+    <div class="news-flex-container">
+        <div class="news-flex-img">
+          <div class="news-flex-thumbnail">
+            <img src="{{ site.url }}{{ site.baseurl }}/img/icons/code_icon_small.png""/>
+          </div>
+        </div>
+        <div class="news-flex-body">
+          <div>
+              <a href="{{ new.linkurl }}" target="_blank"><strong>{{ new.title }}</strong></a>
+          </div>
+          <div >
+              {{ new.description }}
+          </div>
+      </div>
+    </div>
+    {% endfor %}
+    <div style="padding-top: 20px">
+      <a href="{{ site.url }}{{ site.baseurl }}/software/"><h3 style="text-align: end; padding-bottom: 25px;">All software...</h3></a>
+    </div>

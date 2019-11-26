@@ -275,7 +275,13 @@ a.press-item:hover {
 .team-container{
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-around;
+  justify-content: space-between;
+}
+
+.team-container-2{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
 }
 
 .post-meta-important {
@@ -480,6 +486,7 @@ width: 256px;
 .publication-thumbnail > img{
 width: 256px;
 height: auto;
+padding-top: 20px;
 @include media-query(725px) {
   width: 100%;
 }

@@ -4,44 +4,13 @@ title: software
 permalink: /software/
 ---
 
-{% for project in site.software %}
-
-{% if project.redirect %}
-<div class="project">
-    <div class="thumbnail">
-        <a href="{{ project.redirect }}" target="_blank">
-        {% if project.img %}
-        <img class="thumbnail" src="{{ project.img }}"/>
-        {% else %}
-        <div class="thumbnail blankbox"></div>
-        {% endif %}
-        <span>
-            <h1>{{ project.title }}</h1>
-            <br/>
-            <p>{{ project.description }}</p>
-        </span>
-        </a>
+<div class="news-grid" style="padding-top: 25px; display: grid; column-gap: 16px; grid-template-columns: fit-content(250px) auto;">
+  {% for new in site.software reversed %}
+    <div style="grid-column-start: 1;grid-column-end: 2;">
+        <strong>{{ new.title }}</strong>
     </div>
-</div>
-{% else %}
-
-<div class="project ">
-    <div class="thumbnail">
-        <a href="{{ site.baseurl }}{{ project.url }}">
-        {% if project.img %}
-        <img class="thumbnail" src="{{ project.img }}"/>
-        {% else %}
-        <div class="thumbnail blankbox"></div>
-        {% endif %}
-        <span>
-            <h1>{{ project.title }}</h1>
-            <br/>
-            <p>{{ project.description }}</p>
-        </span>
-        </a>
+    <div style="grid-column-start: 2;grid-column-end: 3; ">
+        {{ new.description }}
     </div>
+  {% endfor %}
 </div>
-
-{% endif %}
-
-{% endfor %}

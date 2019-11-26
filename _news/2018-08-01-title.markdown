@@ -1,0 +1,7 @@
+---
+layout: post
+title:  Paper on the effectiveness of Smartphone Locks in Preventing Intrusions by Socially-Close Adversaries presented at WAY'18 workshop at SOUPS, in Baltimore.
+date:   2018-08-01 00:00:00
+description: Paper on the effectiveness of Smartphone Locks in Preventing Intrusions by Socially-Close Adversaries presented at WAY'18 workshop at SOUPS, in Baltimore.
+---
+Paper on the effectiveness of Smartphone Locks in Preventing Intrusions by Socially-Close Adversaries presented at WAY'18 workshop at SOUPS, in Baltimore.

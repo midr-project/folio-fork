@@ -17,6 +17,8 @@ collections:
     output: true
   team:
     output: true
+  past:
+    output: true
   news:
     output: true
   press:
