@@ -2,7 +2,7 @@
 layout: post
 title:  "Snooping through your partner’s phone? It might not end as badly as you think: study"
 date:   2019-06-02
-description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Proin sed libero enim sed faucibus turpis in eu mi. Velit egestas dui id ornare arcu. Nec ullamcorper sit amet risus nullam eget felis eget nunc. Lobortis mattis aliquam faucibus purus in massa tempor nec feugiat. Orci nulla pellentesque dignissim enim sit amet venenatis urna cursus."
+description: "Several media outlets featured our CHI 2019 paper on unauthorized access to smartphones. Check our Press page for several instances"
 where: tv
 ---
 
@@ -20,4 +20,3 @@ where: tv
 
 <br>
 
-### YEEH YOU HEAR THAT DARRYL!!!!!

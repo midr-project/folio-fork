@@ -4,13 +4,13 @@ layout: default
 
 <div class="header-bar" style="padding-top: 0;">
   <!-- <h2>Usable Intrusion Detection & Response on Personal Mobile Devices</!-->
-  <p class="project-description">The goal of this project is to develop and evaluate passive modes of security, that can accommodate the social relationships between owners and socially-close adversaries. Unlike unlock authentication, which is an active defense against physical access, passive defenses aim to primarily provide awareness, traceability, and recovery from intrusions; and to only secondarily engage counter-measures like blocking access.</p>
+  <p class="project-description">The goal of <strong>mIDR</strong> (Usable Intrusion Detection & Response on Personal Mobile Devices,  FCT AAC 02/SAICT/- 2017, project 30347, cofunded by COMPETE/FEDER/FNR) is to develop and evaluate passive modes of security, that can accommodate the social relationships between owners and socially-close adversaries. Unlike unlock authentication, which is an active defense against physical access, passive defenses aim to primarily provide awareness, traceability, and recovery from intrusions; and to only secondarily engage counter-measures like blocking access.</p>
   <hr>
 </div>
 <div class="header-bar-small" style="margin-bottom: 25px">
 <h1>News</h1>
 </div>
-{% for new in site.news reversed limit:5 %}
+{% for new in site.news reversed %}
 <div class="news-flex-container">
     <div class="news-flex-img">
       <div class="news-flex-thumbnail">
@@ -60,7 +60,7 @@ layout: default
     {% endfor %}
 </ul>
 <div style="padding-top: 20px">
-  <a href="{{ site.url }}{{ site.baseurl }}/press/"><h3 style="text-align: end;">All publications...</h3></a>
+  <a href="{{ site.url }}{{ site.baseurl }}/publications/"><h3 style="text-align: end;">All publications...</h3></a>
 </div>
 <hr>
 <div class="header-bar-small">
@@ -81,7 +81,7 @@ layout: default
           <div class="press-grid-body">
               <h2><a class="post-title" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
               <p class="post-description">{{ post.description }}</p>
-              <p class="post-meta">{{ post.date | date: '%B %-d, %Y — %H:%M' }}</p>
+              <p class="post-meta">{{ post.date | date: '%B %-d, %Y' }}</p>
           </div>
         </div>
       <!-- <li>
@@ -108,7 +108,7 @@ layout: default
         </div>
         <div class="news-flex-body">
           <div>
-              <a href="{{ new.linkurl }}" target="_blank"><strong>{{ new.title }}</strong></a>
+              <a href="{{ new.link }}" target="_blank"><strong>{{ new.title }}</strong></a>
           </div>
           <div >
               {{ new.description }}
